@@ -1,54 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link 
-        rel="stylesheet" 
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-        crossorigin="anonymous"
-        />
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-        />
-    
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Giphy App</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GifTastic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Giphy App</h1>
+  <header id="topic-buttons">
+    <!-- topic buttons are to be populated here -->
+  </header>
 
-        <!--Search input-->
-        <div class="form">
-            <form>
-                <input type="text" 
-                id="search" 
-                class="form-control" 
-                placeholder="Search giphy.." 
-                />
-                <button class="btn btn-primary" id="submit-button">Search</button>
-                <button class="btn btn-primary" id="clear-results">Clear Results</button>
+  <aside>
+    <!-- an input box and submit button for adding a topic -->
+    <form>
+      <div class="form-group mr-3 float-right">
+        <label for="addTopic" class="m-0">Add an animal</label>
+        <input type="topic" class="form-control" id="new-topic">
+        <button type="submit" class="btn btn-info btn-sm mt-1" id="add-topic">Submit</button>
+      </div>
+    </form>
+  </aside>
 
+  <section id="img-section">
+    <!-- fetched images are to be populated here -->
+  </section>
 
-            </form>
-        </div>
-        <div class="recent-search"></div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="favorite-only">
-            <label class="form-check-label" for="favorite-only">Favorite Only</label>
-        </div>
-        <div class="giphy-content"></div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="./assets/js/app.js"></script>
+  <script>
+    $(document).ready(() => {
+      let gifTastic = new GifTastic();
+      gifTastic.run();
+    });
+  </script>
 </body>
 
 </html>

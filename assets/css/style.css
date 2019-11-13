@@ -1,28 +1,32 @@
-
-
-h1 {
-    text-align: center;
-    margin-top: .5em;
-    margin-bottom: .9em;
-    text-shadow: 3px 3px #ff4893;
-    font-weight: 800;
-
-}
-form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-#clear-results {
-    width: 10em;
-}
-
-
-.recent-search {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 20px 0px;
-}
+* {
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: block;
+  }
+  
+  section {
+    width: 80%;
+  }
+  
+  h3 {
+    font-size: 0.8em;
+    margin: 0em;
+    text-indent: 2%;
+  }
+  
+  .fa-download {
+    float: right;
+    margin-right: 7%;
+  }
+  
+  @media screen and (max-width: 640px) {
+    section {
+      width: 100vw;
+    }
+  
+    .form-group {
+      width: 90vw;
+    }
+  }
